@@ -81,7 +81,13 @@ $(document).ready(function(){
                                                        +"&data[Comment][note_id]="+$('#CommentNoteId').attr('value')
                                                        +"&data[Comment][user_id]="+$('#CommentUserId').attr('value'),
                                                 success: function(msg){
-                                                                        $('#addedcommentsdiv').html(msg);           
+                                                                        $('#addedcommentsdiv').html(msg);
+                                                                        $('#CommentBody').attr('value', '');
+                                                            },
+                                                beforeSend: function(XMLHttpRequest){
+                                                                        flip=1;
+                                                                        $('#addcommentdiv').slideUp();
+                                                                        $('#toggleAddComment').html("<a class='showhide' href='#dummy'>Add Comment</a>");
                                                             }
                                                 });
                         
