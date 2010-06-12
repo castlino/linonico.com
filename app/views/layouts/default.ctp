@@ -33,7 +33,7 @@
 				<li class='rightfl'><?php echo $html->link($strLogInOut, array('controller' => 'users', 'action' => $strLogInOut)); ?></li>
 				</ul>
 				<ul>
-				<li><?php echo $html->link('home', array('controller' => 'notes', 'action' => 'viewpluscomment', 4)); ?></li>
+				<li><?php echo $html->link('home', array('controller' => 'notes', 'action' => 'viewpluscomment', 21)); ?></li>
 				<li><?php echo $html->link('about', array('controller' => 'users', 'action' => 'about')); ?></li>
 				<li><?php echo $html->link('contact', array('controller' => 'users', 'action' => 'contact')); ?></li>
 				</ul>
@@ -60,6 +60,7 @@
 		</div>
 */ ?>
 		<div id="footerbg"> 
+		        <div style="width: 800px; padding-top:100px;" id="opticEmp"><a href="http://www.opticempire.com.au/oesys/aff.php?aff=010" style="float: right;"><img src="http://www.opticempire.com.au/images/oeLOGO.jpg" /></a>         </div>
 		        <div id="footercap">        </div>
 		        <p class="footer"><i>LiNoniCo 2009</i></p>
 		</div>
