@@ -5,9 +5,9 @@ class DATABASE_CONFIG {
 		'driver' => 'mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'linonico_dbuser',
-		'password' => 'antec900',
-		'database' => 'linonico_linonicoDB',
+		'login' => 'lino',
+		'password' => 'w4td4',
+		'database' => 'linonico',
 	);
 }
 ?>
