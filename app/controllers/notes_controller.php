@@ -4,6 +4,14 @@ class NotesController extends AppController {
 	var $name = 'Notes';
 	var $helpers = array('Html', 'Form');
 
+
+	var $paginate = array(
+				'limit' => 25,
+				'order' => array(
+					'Note.id' => 'desc'
+				)
+			);
+
 	function beforeFilter() {
 	    parent::beforeFilter(); 
 	    $this->Auth->allowedActions = array('index', 'view', 'viewpluscomment');
@@ -23,8 +31,23 @@ class NotesController extends AppController {
 	}
 
 	function index() {
-		$this->Note->recursive = 0;
-		$this->set('notes', $this->paginate());
+		//echo "-->".$this->data['NoteSearch']['searchString'];
+		//print_r($this->data['NoteSearch']);
+		//print_r($_POST);
+		$searchStr =$this->data['NoteSearch']['searchString'];
+		if(!$searchStr){
+			$this->Note->recursive = 0;
+			$this->set('notes', $this->paginate());
+		}else{
+			$cond = array('OR' => array(
+						array('title LIKE ' => '%'.$searchStr.'%'),
+						array('body LIKE ' => '%'.$searchStr.'%'),
+						array('description LIKE ' => '%'.$searchStr.'%'),
+					)
+				);
+			$this->Note->recursive = 0;
+			$this->set('notes', $this->paginate($cond));
+		}
 	}
 
 	function viewpluscomment($id = null) {

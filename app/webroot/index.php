@@ -58,7 +58,9 @@
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 		/* define('CAKE_CORE_INCLUDE_PATH', '/var/www/html/cakephp'); */
-                   define('CAKE_CORE_INCLUDE_PATH', DS.'home'.DS.'linonico'.DS.'public_html'.DS.'cakephp');
+                   //define('CAKE_CORE_INCLUDE_PATH', DS.'home'.DS.'linonico'.DS.'public_html'.DS.'cakephp');
+		define('CAKE_CORE_INCLUDE_PATH', '/var/www/prod/linonico/cakephp');
+
 	}
 
 /**

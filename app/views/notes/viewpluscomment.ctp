@@ -5,6 +5,7 @@
 	echo $javascript->link('jquery-1.3.1.min');
 	echo $javascript->link('linonico');
 ?>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 <div id="notes">
 	<h1><?php echo $note['Note']['title']; ?></h1>
 	<ul>

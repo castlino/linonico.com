@@ -125,7 +125,27 @@ body{
     height: 266px;
     margin-left: auto;
     margin-right: auto;
+    /* border: 1px solid black; */
     background: none no-repeat 6px 35px;
+}
+#searchbox{
+    width: 300px;
+    height: 266px;
+    float: right; 
+    text-align: right; 
+    margin-top: -3px;
+}
+#searchbox input{
+    height: 23px;
+    font-size: 15px;
+    width: 150px;
+}
+#searchbox .searchButton{
+    height: 30px;
+    font-size: 11px;
+    width: 60px;
+    float: right;
+    margin-left: -4px;
 }
 #menustrip  ul {
          padding-top: 40px;
@@ -165,22 +185,20 @@ body{
 }
 
 #bodybg{
-
+    position: relative;
     width: 1000px;
-    /* height: 800px; */
-    height: auto;
     margin-left: auto;
     margin-right: auto;
+    height: 900px;
     background: url(/img/bodyBG.png) repeat top left;
     /* background: url(/img/bodyBG_faded.png) repeat top left; */
 }
 #mainmessage{
-
+    position: absolute;
     width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    /*background: url(/img/mainmess2.png) no-repeat top left;*/
+    top: -60px;
+    left: 150px;
+    
 }
 
 #footerbg{
@@ -234,14 +252,6 @@ div.message {
     margin-right: auto;
     /* background: url(/img/mainmess2.png) no-repeat top left; */
 }
-#notes{
-    margin: 0;
-    padding: 0;
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    /* background: url(/img/mainmess2.png) no-repeat top left; */
-}
 #notes h1{
 	margin: 0;
 	padding: 0;
@@ -280,8 +290,11 @@ div.message {
 
 #notebodydiv{
         margin: 0; 
-	padding: 0;
+	padding: 10px;
 	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+    	border: thin dashed #4F4F4F;
 }
 #addedcommentsdiv{
 	margin: 0;
@@ -298,8 +311,8 @@ div.message {
 	border-bottom: thin solid #C89A58;
 }
 .notebody{
-    border: thin dashed #4F4F4F;
-    padding-bottom: 40px;
+    /* border: thin dashed #4F4F4F; */
+    padding: 20px;
 }
 /*  Actions  */
 .actions {
@@ -546,5 +559,49 @@ input[type=submit] {
 	width: 500px;
 }
 
+/* Tweeter divs */
+#expTweeter{
+	position: absolute;
+	overflow: hidden;
+	width: 460px;
+	height: 400px;
+	top: 10px;
+	left: 450px;
+}
 
+#expTweeterDiv{
+	position: absolute;
+	width: 460px;
+	height: 395px;
+	top: 20px;
+	left: 0;
+	background-color: #222222;
+	margin-left: 425px;
+}
 
+#expTweeterButton{
+	position: absolute;
+	z-index: 500;
+	width: 35px;
+	height: 395px;
+	left: 0;
+	background: transparent url(/img/twitter35x395.jpg); 
+}
+
+#expTweeterContent{
+	position: absolute;
+	z-index: 495;
+	width: 425px;
+	height: 400px;
+	left: 30px;
+	background-color: #222222; 
+}
+
+#expTweeterRightSkirt{
+	position: absolute;
+	z-index: 500;
+	width: 10px;
+	height: 395px;
+	left: 450px;
+	background-color: #222222; 
+}

@@ -12,7 +12,7 @@
 		echo $form->input('title');
 		echo $form->input('description');
 		echo $form->input('descriptions',array('type'=>'hidden'));
-		echo $form->input('resource_path');
+		//echo $form->input('resource_path');
 		echo "<div id='NoteBodyDiv'>";
 			echo $form->input('body', array('value'=>'Write your notes here....', 'rows'=>'5'));
 		echo "</div>";

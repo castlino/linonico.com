@@ -95,6 +95,15 @@ $(document).ready(function(){
                         //alert( "data[Comment][body]=" + $('#CommentBody').attr('value') + "&data[Comment][note_id]="+$('#CommentNoteId').attr('value') + "&data[Comment][user_id]="+$('#CommentUserId').attr('value')    );
                         });
             //$('#waitDiv').hide();
+
+$('#expTweeterButton').click(function(){
+	var $expDiv = $('#expTweeterDiv');	
+	$expDiv.animate({
+		marginLeft: parseInt($expDiv.css('marginLeft'),10) == 0 ? ( $expDiv.outerWidth()-35 ) : 0
+	});
+});
+
+
 });
 
 
