@@ -5,7 +5,7 @@ class DATABASE_CONFIG {
 		'driver' => 'mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'lino',
+		'login' => 'linonico_user',
 		'password' => 'w4td4',
 		'database' => 'linonico',
 	);
