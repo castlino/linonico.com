@@ -67,36 +67,9 @@
 					<div id="expTweeterButton"></div> 
 					<div id="expTweeterRightSkirt"></div> 
 					<div id="expTweeterContent">
-						<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+						<a class="twitter-timeline" href="https://twitter.com/castlino" data-widget-id="344952785260908545">Tweets by @castlino</a>
 						<script>
-							new TWTR.Widget({
-							  version: 2,
-							  type: 'profile',
-							  rpp: 3,
-							  interval: 4000,
-							  width: 'auto',
-							  height: 295,
-							  theme: {
-							    shell: {
-							      background: '#684211',
-							      color: '#999933'
-							    },
-							    tweets: {
-							      background: '#dbc598',
-							      color: '#6a3a29',
-							      links: '#ee3322'
-							    }
-							  },
-							  features: {
-							    scrollbar: false,
-							    loop: true,
-							    live: true,
-							    hashtags: true,
-							    timestamp: true,
-							    avatars: true,
-							    behavior: 'default'
-							  }
-							}).render().setUser('castlino').start();
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 						</script>
 					</div>
 				</div>
@@ -129,13 +102,38 @@
 		</div>
 	</div>
 	<?php echo $cakeDebug; ?>
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
 
-<!-- Woopra Code Start -->
-<script type="text/javascript" src="//static.woopra.com/js/woopra.v2.js"></script>
-<script type="text/javascript">
-woopraTracker.track();
+woopra.config({
+    domain: 'notes.linonico.com'
+});
+woopra.track();
 </script>
-<!-- Woopra Code End -->
+<!-- End of Woopra Code -->
+
+<script> /* Woopra Trackers */
+/* Place this on a template where a customer initially is identified
+   or after authentication. (Important: Update these values) */
+woopra.identify({
+    email: '{{ notsetup@just.yet }}',
+    name: '{{ account.name }}',
+    company: '{{ account.company }}'
+});
+// The identify code should be added before the "track()" function
+woopra.track();
+
+/* Below is an example of a "payment" event that is sent when 
+   you process a payment for a customer. */
+woopra.track('payment', {
+    amount: '49.95',
+    currency: 'USD'
+});
+</script>
+
 
 <!-- Start Google Analytics Code  -->
 	<script type="text/javascript">
