@@ -1,11 +1,43 @@
-
 <?php
 	//echo $javascript->link('prototype');
 	//echo $javascript->link('scriptaculous');
 	echo $javascript->link('jquery-1.3.1.min');
 	echo $javascript->link('linonico');
 ?>
-<script type="text/javascript">SyntaxHighlighter.all();</script>
+<?php
+	$data = array(
+	    "id" => 24,
+	    "username" => "felinocastro",
+	    "email" => "castlino@gmail.com",
+	    "avatar" => "",
+	    "url" => ""
+	);
+	$message = base64_encode(json_encode($data));
+	$timestamp = time();
+	$hmac = hash_hmac('sha1', $message." ".$timestamp, "iTgCarTNC8rO0H4zXDeDGHbCPT72MuxtZ48Cgaoo6TCeq8Id50yyto1ICGNfoBpH");
+
+?>
+<?php /*
+    <script type="text/javascript">
+	var disqus_config = function () {
+	    // The generated payload which authenticates users with Disqus
+	    //this.page.remote_auth_s3 = '<message> <hmac> <timestamp>';
+	    this.page.remote_auth_s3 = '<?php echo $message." ".$hmac." ".$timestamp; ?>';
+	    this.page.api_key = 'ks0XNBGTcuhhmC71uvupBIeQwmLYO3pJCqdJxDuj8oeH32ycvwRHCKRFDSC3sHWZ';
+	
+		// This adds the custom login/logout functionality
+    this.sso = {
+          name:   "linonico",
+          button:  "http://example.com/images/samplenews.gif",
+          icon:     "http://example.com/favicon.png",
+          url:        "http://notes.linonico.com/users/login",
+          logout:  "http://example.com/logout/",
+          width:   "800",
+          height:  "400"
+    };
+	}
+    </script>
+*/ ?>
 <div id="notes">
 	<h1><?php echo $note['Note']['title']; ?></h1>
 	<ul>
@@ -68,3 +100,19 @@
 		</ul>
 	</div>
 </div>
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<?php /*
+    <script type="text/javascript">
+        var disqus_shortname = 'noteslinonico'; // required: replace example with your forum shortname
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+*/ ?>
