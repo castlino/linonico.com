@@ -12,3 +12,6 @@
 	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp By the way, this site is developed using <a href='http://cakephp.org'>CakePHP</a>. 
 </p>
 </div>
+<div style='margin-top: 50px;'>
+<a href="http://goo.gl/E7EGW" target="_blank"><img src="https://goo.gl/GJ2F2U" alt="GWD Badge" width="125" height="125" border="0" /></a>
+</div>
