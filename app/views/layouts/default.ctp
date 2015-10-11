@@ -40,7 +40,7 @@
 				</ul>
 				<ul>
 				<!-- <li><?php echo $html->link('home', array('controller' => 'notes', 'action' => 'viewpluscomment', 21)); ?></li> -->
-				<li><?php echo $html->link('home', 'http://linonico.com'); ?></li>
+				<li><?php echo $html->link('home', 'http://notes.linonico.com'); ?></li>
 				<li><?php echo $html->link('about', array('controller' => 'users', 'action' => 'about')); ?></li>
 				<li><?php echo $html->link('contact', array('controller' => 'users', 'action' => 'contact')); ?></li>
 				<li><?php echo $html->link('links', array('controller' => 'infos', 'action' => 'showLinks')); ?></li>
